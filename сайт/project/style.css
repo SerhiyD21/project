@@ -1,0 +1,603 @@
+/* Стилі навігаційної панелі */
+nav {
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px 0; /* Збільшено відступи для збільшення висоти панелі */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px; /* Можна додати більше відступів, якщо потрібно */
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Головна сторінка */
+#home {
+    background: url('images/tesla_1.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Вирівнюємо по вертикалі */
+    position: absolute;
+    left: 500px; /* Збільшено відступ зліва для зміщення праворуч */
+    top: 60px;  /* Відступ зверху */
+}
+
+.logo {
+    width: 80px; /* Ширина логотипа */
+    height: auto; /* Пропорційна висота */
+    margin-right: 10px; /* Відступ між логотипом та заголовком */
+}
+
+#home h1 {
+    font-size: 50px;
+    margin: 0;
+    position: relative;
+    top: -300px; /* Піднімає заголовок вище */
+    display: inline-flex;
+    align-items: center; /* Центрує логотип та текст по вертикалі */
+}
+
+#home h1 .tesla {
+    color: black; /* Текст "Tesla" чорний */
+}
+
+#home h1 .drive {
+    color: red; /* Текст "Drive" червоний */
+}
+
+#home h2 {
+    font-size: 24px;
+    margin: 0;
+    position: relative;
+    top: -290px; /* Піднімає заголовок вище */
+    color: black;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    top: 330px;
+}
+
+.social-icons img {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Секція "Послуги автосервісу" */
+#services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #afaeae; /* Базовий сірий колір */
+    background-image: radial-gradient(#d3d3d3 1px, transparent 1px); /* Менші точки */
+    background-size: 5px 5px; /* Щільніший візерунок */
+}
+
+#services h1 {
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #333; /* Базовий чорний колір для тексту */
+    text-align: center;
+    border-bottom: 2px solid black; /* Чорна лінія під заголовком */
+    padding-bottom: 10px; /* Відступ між текстом і лінією */
+}
+
+#services h1 .services-title {
+    color: #000; /* Чорний колір для "Послуги автосервісу" */
+}
+
+#services h1 .tesla {
+    color: #000; /* Чорний колір для Tesla */
+}
+
+#services h1 .drive {
+    color: #ff0000; /* Червоний колір для Drive */
+}
+
+
+/* Центрування сітки */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Автоматичне розміщення колонок */
+    gap: 20px;
+    max-width: 1000px; /* Обмеження ширини */
+    margin: 0 auto; /* Центрування сітки */
+}
+
+/* Оформлення колонок */
+.service-item {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 3px solid #3e3e3e; /* Додаємо рамку */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Забирає підкреслення */
+    color: inherit; /* Зберігає колір тексту */
+    display: block; /* Робить весь блок клікабельним */
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Анімація ефекту */
+}
+
+/* Стиль для іконок */
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    display: block; /* Центрування зображень */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Секція "Наші роботи" */
+#works {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#works h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black; /* Чорна лінія під заголовком */
+    padding-bottom: 10px; /* Відступ між текстом і лінією */
+}
+
+#works p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Галерея фотографій */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Перенос елементів на новий рядок */
+    gap: 15px; /* Зменшено відстань між фотографіями */
+    margin: 0 auto;
+}
+
+/* Оформлення кожної фотографії */
+.photo-item {
+    border: 2px solid #ccc; /* Легка рамка для фотографій */
+    padding: 8px; /* Зменшено відступи */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 40%; /* Зменшена ширина для рамки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-item img {
+    width: 100%; /* Робить зображення на 100% ширини контейнера */
+    height: auto; /* Пропорційна висота зображення */
+    border-radius: 8px;
+}
+
+/* Збільшення фотографії при наведенні */
+.photo-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Секція "Про нас" */
+#about {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Контейнер для всієї четвертої сторінки */
+.about-container {
+    border: 2px solid #333; /* Товста чорна рамка */
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 900px;  /* Зменшена ширина рамки */
+    border-radius: 5px; /* Округлі кути рамки */
+    background-color: #ffffff;  /* Білий фон всередині рамки */
+}
+
+#about h1 {
+    text-align: center;
+    font-size: 36px; /* Збільшено розмір шрифту заголовка */
+    margin-bottom: 20px;
+}
+
+#about p, #about ul {
+    font-size: 18px; /* Збільшено шрифт для абзаців та списків */
+    line-height: 1.8; /* Покращено відстань між рядками */
+    text-align: center;
+}
+
+/* Стили для списку цінностей */
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about ul li {
+    margin: 20px 0;
+}
+
+#about ul li strong {
+    color: #d3d3d3;  /* Світло-сірий для заголовків */
+}
+
+/* Стилі для відкриваючого меню */
+.accordion {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    padding: 12px; /* Збільшено відступи кнопки */
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 18px; /* Збільшено шрифт для кнопки аккордеону */
+    border-radius: 5px;
+    margin-top: 15px; /* Збільшено відступ від попереднього елемента */
+}
+
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    display: none;
+    padding: 12px; /* Збільшено відступи всередині панелі */
+    background-color: #f9f9f9;
+    border-left: 3px solid #333;
+    margin-top: 10px;
+    font-size: 16px; /* Збільшено шрифт для тексту в панелі */
+}
+
+/* Показ панелей після натискання */
+.accordion.active + .panel {
+    display: block;
+}
+
+
+.value-btn {
+    background-color: #7f7f7f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: left;
+    width: 60%;  /* Зменшення ширини кнопки */
+    margin: 10px auto;  /* Центрування кнопки */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.value-btn:hover {
+    background-color: #555;
+}
+
+.value-text {
+    display: none;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;  /* Центрування тексту */
+    background-color: #f0f0f0;  /* Сірий фон */
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;  /* Зменшення ширини текстового блоку */
+    border-radius: 8px;
+}
+
+.value-text.show {
+    display: block;
+}
+
+/* Загальний стиль футера */
+#contact {
+    background-color: #e4e4e4; /* Світлий фон */
+    padding: 40px 20px;
+    color: #333; /* Основний текстовий колір */
+    border-top: 3px solid #333; /* Чорна лінія відділення */
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Дозволяє переносити елементи на новий рядок при обмеженій ширині */
+}
+
+.footer-section {
+    flex: 1; /* Розподіл ширини між секціями */
+    max-width: 25%; /* Обмеження ширини для кожної секції */
+    margin: 0 10px; /* Відступи між секціями */
+}
+
+.footer-section h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #000; /* Чорний колір заголовків */
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-image-container {
+    flex: 1;
+    max-width: 25%;
+    text-align: center; /* Вирівнювання зображення по центру */
+}
+
+.footer-image {
+    width: 100%; /* Зображення адаптивне */
+    max-width: 250px; /* Обмеження ширини зображення */
+    height: auto; /* Зберігає пропорції */
+}
+
+/* Текст про авторські права */
+.footer-copyright {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc; /* Лінія для відділення */
+}
+
+/* Стиль для посилань в футері */
+.footer-section a {
+    color: #333; /* Темний колір тексту */
+    text-decoration: none; /* Без підкреслення */
+}
+
+.footer-section a:hover {
+    color: #333; /* Тримати той самий колір при наведенні */
+    text-decoration: none; /* Без підкреслення при наведенні */
+}
+
+/* Стиль для модального вікна */
+.modal {
+    display: none; /* За замовчуванням модальне вікно приховане */
+    position: fixed;
+    z-index: 1; /* Модальне вікно з'являється поверх іншого контенту */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Чорний фон */
+    background-color: rgba(0,0,0,0.4); /* Прозорий фон */
+}
+
+/* Стиль для контенту в модальному вікні */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+}
+
+/* Стиль для кнопки закриття */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стиль для сторінок послуг */
+.centered-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.underline {
+    height: 2px;
+    background-color: black;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.image-container {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.description {
+    flex: 1 1 50%;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.description ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.description ul li {
+    margin-bottom: 10px;
+}
+
+.order-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.order-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.order-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.order-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.order-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+}
+
+/* Стилі для великих екранів */
+body {
+    font-size: 18px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Адаптація для планшетів */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    .description, .image-container {
+        width: 100%;
+    }
+}
+
+/* Адаптація для мобільних телефонів */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content-row {
+        padding: 10px;
+    }
+}
+
